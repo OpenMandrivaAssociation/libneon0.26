@@ -13,6 +13,7 @@ URL: 		http://www.webdav.org/neon/
 Source0: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz
 Source1: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz.asc
 Patch0:		neon-locales.diff
+Patch1:		neon-fail_parse.diff
 Provides:	libneon
 Provides:	neon
 BuildRequires:	openssl-devel >= 0.9.7
@@ -87,6 +88,7 @@ Static %{libname} library.
 
 %setup -q -n %{rname}-%{version}
 %patch0 -p1
+%patch1 -p0
 
 # fix mo clash (#28428)
 perl -pi -e "s|_LIBNAME_|%{libname}|g" Makefile.in src/ne_internal.h
