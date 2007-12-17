@@ -30,7 +30,6 @@ Requires:	openssl >= 0.9.7
 %if %mdkversion >= 1020
 BuildRequires:	multiarch-utils >= 1.0.3
 %endif
-Buildroot: 	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 neon is an HTTP and WebDAV client library for Unix systems, 
