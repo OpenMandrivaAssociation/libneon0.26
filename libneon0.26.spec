@@ -6,7 +6,7 @@
 Summary: 	An HTTP and WebDAV client library, with a C interface
 Name: 		libneon0.26
 Version: 	0.26.4
-Release: 	%mkrel 7
+Release: 	%mkrel 8
 Group: 		Development/Other
 License: 	GPL
 URL: 		http://www.webdav.org/neon/
@@ -14,6 +14,7 @@ Source0: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz
 Source1: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz.asc
 Patch0:		neon-locales.diff
 Patch1:		neon-fail_parse.diff
+Patch2:		neon-CVE-2009-2474.patch
 Provides:	libneon
 Provides:	neon
 BuildRequires:	openssl-devel >= 0.9.7
@@ -89,6 +90,7 @@ Static %{libname} library.
 %setup -q -n %{rname}-%{version}
 %patch0 -p1
 %patch1 -p0
+%patch2 -p1 -b .CVE-2009-2474
 
 # fix mo clash (#28428)
 perl -pi -e "s|_LIBNAME_|%{libname}|g" Makefile.in src/ne_internal.h
