@@ -1,0 +1,24 @@
+diff -Naur neon-0.26.4/Makefile.in neon-0.26.4.oden/Makefile.in
+--- neon-0.26.4/Makefile.in	2007-04-06 17:42:47.000000000 +0200
++++ neon-0.26.4.oden/Makefile.in	2007-07-17 12:32:45.000000000 +0200
+@@ -182,7 +182,7 @@
+ install-nls-yes:
+ 	@for f in $(LINGUAS); do \
+ 	 $(INSTALL) -d $(DESTDIR)$(localedir)/$$f/LC_MESSAGES; \
+-	 $(INSTALL_DATA) $(srcdir)/po/$$f.gmo $(DESTDIR)$(localedir)/$$f/LC_MESSAGES/neon.mo; \
++	 $(INSTALL_DATA) $(srcdir)/po/$$f.gmo $(DESTDIR)$(localedir)/$$f/LC_MESSAGES/_LIBNAME_.mo; \
+ 	done
+ 
+ ChangeLog:
+diff -Naur neon-0.26.4/src/ne_internal.h neon-0.26.4.oden/src/ne_internal.h
+--- neon-0.26.4/src/ne_internal.h	2005-08-19 11:24:20.000000000 +0200
++++ neon-0.26.4.oden/src/ne_internal.h	2007-07-17 12:33:42.000000000 +0200
+@@ -30,7 +30,7 @@
+ #undef _
+ #ifdef NE_HAVE_I18N
+ #include <libintl.h>
+-#define _(str) dgettext(PACKAGE_NAME, str)
++#define _(str) dgettext("_LIBNAME_", str)
+ #else
+ #define _(str) (str)
+ #endif /* NE_ENABLE_NLS */
