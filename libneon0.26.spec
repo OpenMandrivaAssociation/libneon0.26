@@ -9,7 +9,7 @@ Version: 	0.26.4
 Release: 	%mkrel 8
 Group: 		Development/Other
 License: 	GPL
-URL: 		http://www.webdav.org/neon/
+URL: 		https://www.webdav.org/neon/
 Source0: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz
 Source1: 	http://www.webdav.org/neon/%{rname}-%{version}.tar.gz.asc
 Patch0:		neon-locales.diff
