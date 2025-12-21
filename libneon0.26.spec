@@ -17,6 +17,10 @@ Patch1:		neon-fail_parse.diff
 Patch2:		neon-CVE-2009-2474.patch
 Provides:	libneon
 Provides:	neon
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	openssl-devel >= 0.9.7
 BuildRequires:	libxml2-devel
 BuildRequires:	libxmlrpc-devel
