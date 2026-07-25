@@ -6,7 +6,7 @@
 Summary: 	An HTTP and WebDAV client library, with a C interface
 Name: 		libneon0.26
 Version: 	0.26.4
-Release: 	%mkrel 8
+Release: 	9
 Group: 		Development/Other
 License: 	GPL
 URL: 		https://www.webdav.org/neon/
